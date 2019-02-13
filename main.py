@@ -1,7 +1,6 @@
 # -------- Telepot --------------#
 import telepot
 from telepot.loop import MessageLoop
-from telepot.namedtuple import ReplyKeyboardMarkup
 # ---------- Other --------------#
 from time import sleep
 import markdown
