@@ -3,11 +3,15 @@ import telepot
 from telepot.loop import MessageLoop
 # ---------- Other --------------#
 from time import sleep
-import markdown
+import markdown, logging
 from bs4 import BeautifulSoup
 
 TOKEN = 'BOT_TOKEN'
 bot = telepot.Bot(TOKEN)
+
+#Logging
+log_location =  'bot.log'#Loction of log file.
+logging.basicConfig(filename=log_location ,format='%(asctime)s - %(name)s - %(message)s', level=logging.INFO)
 
 help = markdown.markdown(open('./responses/help.md', encoding='utf8').read())
 link = markdown.markdown(open('./responses/link.md', encoding='utf8').read())
